@@ -12,9 +12,15 @@ reverse("id"); // "di"
 reverse(""); // ""
 ***********************************************************************/
 
-
+debugger
 function reverse(str) {
-  // Your code here
+
+  if(str === "") {
+    return ""
+  } else {
+    return reverse(str.substring(1)) + str.charAt(0);
+  }
+
 }
 
 reverse("house"); // "esuoh"
