@@ -12,16 +12,6 @@ reverse("id"); // "di"
 reverse(""); // ""
 ***********************************************************************/
 
-// function reverse(str) {
-
-//   if(str === "") {
-//     return ""
-//   } else {
-//     return reverse(str.substring(1)) + str.charAt(0);
-//   }
-
-// }
-
 function reverse(str) {
 
   if ( str.length === 0 ) {
