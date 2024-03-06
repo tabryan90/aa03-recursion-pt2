@@ -19,22 +19,26 @@ exponent(3, 2); // 9
 exponent(2, -2); // 1/4 (or 0.25)
 exponent(5, 5); // 3125
 ***********************************************************************/
+let exponent = (num, power) => {
+  if (power === 0) {
+    return 1;
+  }
+  if (power === 1) {
+    return num;
+  }
+  if(power < 0){
+    return 1/exponent(num, -power);
+  }
 
-function exponent(num, power) {
-    if (power === 0) return 1;
-
-    if (power > 0) {
-        return num * exponent(num, power - 1);
-    }
-
-    if (power < 0) {
-        return 1/(num * exponent(num, -power - 1));
-    }
-}
+  return num * exponent(num, power - 1);
+};
+console.log(exponent(3, 2)); // 9
+console.log(exponent(2, -2)); // 1/4 (or 0.25)
+console.log(exponent(5, 5)); // 3125console.log(
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {
-    module.exports = exponent;
+  module.exports = exponent;
 } catch (e) {
-    module.exports = null;
+  module.exports = null;
 }

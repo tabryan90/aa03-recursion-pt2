@@ -10,17 +10,20 @@ reverse("atom"); // "mota"
 reverse("q"); // "q"
 reverse("id"); // "di"
 reverse(""); // ""
+test
 ***********************************************************************/
-
-function reverse(str) {
-
-  if ( str.length === 0 ) {
-    return str;
+let reverse = (string) => {
+  if(string.length === 0) {
+    return '';
   }
-
-  return reverse(str.slice(1)) + str[0];
+  return  reverse(string.slice(1)) + string[0];
 }
-
+console.log(reverse("house")); // "esuoh"
+console.log(reverse("dog")); // "god"
+console.log(reverse("atom")); // "mota"
+console.log(reverse("q")); // "q"
+console.log(reverse("id")); // "di"
+console.log(reverse("")); // ""
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {
   module.exports = reverse;
