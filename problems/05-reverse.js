@@ -10,7 +10,7 @@ reverse("atom"); // "mota"
 reverse("q"); // "q"
 reverse("id"); // "di"
 reverse(""); // ""
-test
+test1
 ***********************************************************************/
 let reverse = (string) => {
   if(string.length === 0) {
